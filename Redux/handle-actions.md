@@ -30,7 +30,7 @@ overwrite the entire state?
 The `redux-actions` package provides a super handy function that wraps actions
 into a plain-object of those:
 
-```
+```javascript
 import {
   handleActions
 } from 'redux-actions';
