@@ -54,7 +54,7 @@ people prefer having them to make lives of other programmers easier (harder)
 through requiring explicit constants declaration and having ReferenceError
 thrown otherwise. It's possible to use constants, too, just add square brackets:
 
-```
+```javascript
 import {
   handleActions
 } from 'redux-actions';
