@@ -1,4 +1,4 @@
-# Deconstructing with default values
+# Destructuring with default values
 
 The most interesting way to use deconstructing is to use is with default value
 of parameters taken from an object provided as the only argument. Something like
