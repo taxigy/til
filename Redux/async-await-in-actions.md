@@ -50,9 +50,10 @@ to run synchronously (which is doubtfully better, but still useful in some cases
 
 ```javascript
 export function anAction() {
+  const resource = '/resource';
+
   return async (dispatch) => {
     try {
-      const resource = '/resource';
       const result = await axios.get(resource);
 
       dispatch({
@@ -82,6 +83,8 @@ app state, so we can reach that `loading` property:
 
 ```javascript
 export function anAction() {
+  const resource = '/resource';
+
   return async (dispatch, getState) => {
     const {
       someReducer: {
@@ -100,7 +103,6 @@ export function anAction() {
     });
 
     try {
-      const resource = '/resource';
       const result = await axios.get(resource);
 
       dispatch({
