@@ -37,3 +37,4 @@ the nested query, which, in turn, checks if `uuis` is either "123" or "456".
 
 * Mentioned in a 3 years old StackOverflow question,
   [see](http://stackoverflow.com/questions/10298001/mongodb-query-in-array-of-object/36000367#36000367).
+* And in a new question, [see](http://stackoverflow.com/a/36000588/1287643).
