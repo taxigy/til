@@ -63,3 +63,32 @@ const {
 ```
 
 Never do that in your codebase.
+
+## Destructuring in for/of
+
+Easy:
+
+```javascript
+const bodies = {
+  small: {
+    head: 'small',
+    feet: 'small'
+  },
+  mid: {
+    head: 'big',
+    feet: 'small'
+  },
+  big: {
+    head: 'big',
+    feet: 'big'
+  }
+};
+
+for (let {head, feet} of _.map(bodies, ({body, key}) => ({body: {head, feet}, key}))) {
+  console.log(`${key}: ${head}, ${feet}`);
+}
+```
+
+And it's a perfect way to shoot in the foot, just take a look at the longest
+line. Well, it's a little worse than could be because of lodash's `map`. But
+anyway. Never do that in your codebase.
