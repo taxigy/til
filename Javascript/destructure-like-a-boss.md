@@ -92,3 +92,23 @@ for (let {head, feet} of _.map(bodies, ({body, key}) => ({body: {head, feet}, ke
 And it's a perfect way to shoot in the foot, just take a look at the longest
 line. Well, it's a little worse than could be because of lodash's `map`. But
 anyway. Never do that in your codebase.
+
+# Get value by a random key and store into a constant
+
+What if you have username stored as a string and also have an object where
+usernames are keys and values are users' favourite food? Easily:
+
+```javascript
+const favs = {
+  hans: 'wurst',
+  pete: 'bier'
+};
+const username = 'hans';
+const {
+  [username]: hansLikes = '(none)'
+} = favs;
+
+console.log(hansLikes); // -> wurst
+```
+
+Purely functional, perfectly readable, considerably unreliable.
