@@ -52,3 +52,17 @@ resolved the issue. It doesn't look like it could be a common mistake, but it
 just gave me an idea about how little friendly Cordova is.
 
 Always control all the refs and check for ReferenceErrors!
+
+Same applies to one more problem that was perfectly handled by browser but not
+on a mobile device. Since I used *device* Cordova plugin, at some moment in
+time, when the code was loading, `device` was still undefined, hence
+ReferenceError. In such situations, having `typeof` as the first item of many in
+a confitinal statement helps a lot. So, like
+
+```javascript
+if (typeof device === 'object' && something) {
+  // do something meaningful with device information
+}
+```
+
+would work without having an exception thrown even when `device` is undefined.
