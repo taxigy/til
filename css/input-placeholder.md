@@ -19,7 +19,7 @@ export default const theInput = ({className, onChange, onBlur}) => (
 and so the stylesheet is
 
 ```scss
-.searchBox {
+.theInput {
   padding: 2px 16px;
   font-size: 10pt;
   line-height: 2.25;
