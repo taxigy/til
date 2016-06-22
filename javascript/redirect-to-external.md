@@ -38,7 +38,7 @@ handleClick(event) {
 
   setTimeout(() => {
     console.log('Going away');
-    window.location.assign(url);
+    window.location.assign(url); // <- this one
   }, 2000);
 }
 
@@ -46,7 +46,7 @@ render() {
   return (
     <a
       href="#"
-      onClick={() => console.log('Going away')}>
+      onClick={::this.handleClick}>
       go away
     </a>
   );
