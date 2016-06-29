@@ -51,14 +51,25 @@ const a = x => 1 - !x
 
 All mathematicians be giving you approval nod.
 
-## Divide by self or 0
+## Divide by self, or 0
 
 If you divide a number by itself, it has to be 1. Exactly, except when you
 divide 0 by itself in Javascript, you get NaN. So, simply return the result of
 division of number by itself _or_ 0:
 
-```
+```javascript
 const a = x => x / x || 0;
 ```
 
 Not very much arithmetic but still works.
+
+## Divide by self AND 1
+
+Now here comes a little less evident way to extract 0 or 1 from any number:
+
+```javascript
+const a = x => x / x & 1
+```
+
+The trick is that NaN AND 1 returns 0, which is precisely what we're
+seeking for.
