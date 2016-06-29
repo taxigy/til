@@ -14,7 +14,7 @@ One that [Airbnb would
 propose](https://github.com/airbnb/javascript#type-casting--coercion):
 
 ```javascript
-const a = x => Number(Boolean(x))
+const a = x => Number(Boolean(x));
 ```
 
 The underlying idea is simple: first convert the number into
@@ -25,7 +25,7 @@ The underlying idea is simple: first convert the number into
 Like this:
 
 ```javascript
-const a = x => +!!x
+const a = x => +!!x;
 ```
 
 Pretty same as previous one, saves you bytes and kills other
@@ -36,7 +36,7 @@ programmer's time. Never do it this way.
 This way:
 
 ```javascript
-const a = x => ~~!!x
+const a = x => ~~!!x;
 ```
 
 First converts into a Boolean that would evaluate into 0 or 1 (`false` or `true`, respectively), then bitwise NOT twice. It works but it questions your faith in humanity.
@@ -46,7 +46,7 @@ First converts into a Boolean that would evaluate into 0 or 1 (`false` or `true`
 If you subtract 0 or 1 from 1, you'll get 1 or 0. Easy!
 
 ```javascript
-const a = x => 1 - !x
+const a = x => 1 - !x;
 ```
 
 All mathematicians be giving you approval nod.
@@ -68,8 +68,19 @@ Not very much arithmetic but still works.
 Now here comes a little less evident way to extract 0 or 1 from any number:
 
 ```javascript
-const a = x => x / x & 1
+const a = x => x / x & 1;
 ```
 
 The trick is that NaN AND 1 returns 0, which is precisely what we're
 seeking for.
+
+## XORing 1 with NOT-number
+
+The idea is simple: XOR the negation of boolean evaluated into number (which
+should be 0 or 1):
+
+```javascript
+const a = x => 1 ^ !x;
+```
+
+Now this is quite a weirdness!
