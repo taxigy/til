@@ -50,3 +50,15 @@ const a = x => 1 - !x
 ```
 
 All mathematicians be giving you approval nod.
+
+## Divide by self or 0
+
+If you divide a number by itself, it has to be 1. Exactly, except when you
+divide 0 by itself in Javascript, you get NaN. So, simply return the result of
+division of number by itself _or_ 0:
+
+```
+const a = x => x / x || 0;
+```
+
+Not very much arithmetic but still works.
