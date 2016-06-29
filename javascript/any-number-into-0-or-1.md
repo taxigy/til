@@ -91,7 +91,7 @@ This is the core of understanding how Javascript evaluates logical
 operators: number AND 1:
 
 ```javascript
-const a = x => x && 1
+const a = x => x && 1;
 ```
 
 When the left part of the logical AND expression is truthy, the
@@ -102,3 +102,14 @@ constant 1, this is what we end up with: 0 or 1.
 
 This approach is used widely in React development. (and I
 silently hate it)
+
+## Compare with zero
+
+Now, you thought I forgot that classic elementary programming school
+approach every rookie programmer uses? No way!
+
+```javascript
+const a = x => x > 0 ? x : 0;
+```
+
+Feel old yet?
