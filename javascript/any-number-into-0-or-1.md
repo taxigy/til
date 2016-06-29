@@ -113,3 +113,19 @@ const a = x => x > 0 ? x : 0;
 ```
 
 Feel old yet?
+
+## Length of a filtered array
+
+Everybody knows that you can filter an array these days. Why not
+use it to reflect any number into set of 0 and 1?
+
+```javascript
+const a = x => [x].filter(e => e).length;
+```
+
+The trick is that the length of the array is guaranteed to be 1,
+so it may be filtered into either array of 0 or 1 elements. 0
+itself is falsy, which means that it will be filtered out and not
+included into the output of `filter` method. Then, `length` is
+simply an indicator of presence of truthy values inside the
+resulting array.
