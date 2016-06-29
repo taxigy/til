@@ -84,3 +84,21 @@ const a = x => 1 ^ !x;
 ```
 
 Now this is quite a weirdness!
+
+## React developers would love it: number && 1
+
+This is the core of understanding how Javascript evaluates logical
+operators: number AND 1:
+
+```javascript
+const a = x => x && 1
+```
+
+When the left part of the logical AND expression is truthy, the
+right part is returned as is; otherwise the left part is returned
+as is. So, if the number is 0, it is falsy, and therefore is
+returned; otherwise the right part returned, and since it is
+constant 1, this is what we end up with: 0 or 1.
+
+This approach is used widely in React development. (and I
+silently hate it)
