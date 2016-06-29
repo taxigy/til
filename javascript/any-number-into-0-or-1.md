@@ -109,7 +109,7 @@ Now, you thought I forgot that classic elementary programming school
 approach every rookie programmer uses? No way!
 
 ```javascript
-const a = x => x > 0 ? x : 0;
+const a = x => x == 0 ? x : 1;
 ```
 
 Feel old yet?
