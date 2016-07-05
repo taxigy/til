@@ -129,3 +129,18 @@ itself is falsy, which means that it will be filtered out and not
 included into the output of `filter` method. Then, `length` is
 simply an indicator of presence of truthy values inside the
 resulting array.
+
+## Regex to the rescue!
+
+Tired of weirdness yet? If not, here's the example that involves
+regular expressions. To be honest, not very impressive. It only
+uses the Javascript's intrinsic type casting and literal regex
+declaration, but anyway, it's another way to do the job:
+
+```javascript
+const a = x => 1 - /^0$/.test(x);
+```
+
+What happens here is that `x` is type-casted into a string, and
+the string is either "0" or something else, so the test evaluates
+into true or false correspondingly.
