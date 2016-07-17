@@ -86,7 +86,7 @@ We immediately receive an error because React is not comfortable with rendering 
 {someObject}
 ```
 
-notation. But `images` has to be an array if images, doesn't it?
+notation. But `images` has to be an array of images, doesn't it?
 
 Nope. The value of `images` is an object that is provided by redux-form so you could use it in a way like
 
