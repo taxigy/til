@@ -85,8 +85,8 @@ export default Table extends Component {
     } = this.state;
 
     this.setState({
-      sortBy: index,
-      order: sortBy === column ? -order : 1 // <- check if user clicked the same column once again, so the order has to flip
+      sortBy: column,
+      order: sortBy === column ? -order : 1 // <- check if user clicked the same column once again, so the order has to flip, otherwise the order is ascending by default
     });
   }
 
