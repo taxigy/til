@@ -1,6 +1,6 @@
 # Removing syntactic duplication
 
-In programmin, we have two different types of duplication: syntactic and semantic.
+In programming, we have two different types of duplication: syntactic and semantic.
 
 Syntactic duplication is like this:
 
