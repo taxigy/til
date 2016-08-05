@@ -96,4 +96,6 @@ Looks decent, right? Now imagine that you need to
 
 What really happens here is the code is about 2x longer than it could be if there was no tempting desire to remove that duplication.
 
-Seriously, stop doing that. Thanks.
+The most annoying thing here is that syntactic deduplication is sometimes considered a mark of skill, as if the programmer would be so experienced they would know for sure it's gonna work. But the truth is, it's more like a mark of incompetence. It's short-sighted. Seriously, stop doing that.
+
+K TNX.
