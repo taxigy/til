@@ -106,7 +106,7 @@ import Home from 'containers/Home';
 import Login from 'containers/Login';
 import Dashboard from 'containers/Dashboard';
 
-const requireLogin = requireLogin = (nextState, replace, next) => {
+const requireLogin = (nextState, replace, next) => {
   axios.get('/authentication/check').then(({isAuthenticated}) => {
     if (!isAuthenticated) {
       replace('/login');
