@@ -1,6 +1,6 @@
 # How to check if the user is authenticated on every route enter
 
-In [react-router](), every `Route` component can receive `onEnter` prop, the value a function that may be used to dispatch actions and, generally, redirect. A typical use case is to check if the user is authenticated, by checking whether an access token is present in `localStorage` and hasn't yet expired. With [](), a higher-order component, it's easier than before:
+In [react-router](https://github.com/reactjs/react-router), every `Route` component can receive `onEnter` prop, the value a function that may be used to dispatch actions and, generally, redirect. A typical use case is to check if the user is authenticated, by checking whether an access token is present in `localStorage` and hasn't yet expired. With [redux-auth-wrapper](https://github.com/mjrussell/redux-auth-wrapper), a higher-order component, it's easier than before:
 
 ```javascript
 import React from 'react';
