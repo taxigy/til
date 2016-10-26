@@ -102,6 +102,8 @@ don't introduce new functions to your code until it's perfect
 time for that, and you see the result in your browser console.
 Double benefit!
 
+----
+
 One possible mistake you can make is to declare `person` as an
 argument of that function instead of referring to `person` that
 is the argument to outer scope function:
@@ -112,6 +114,8 @@ is the argument to outer scope function:
 
 This way, you'll instantiate `person` variable in context of this
 little function. Try it and see what happens.
+
+----
 
 There's also a bit more advanced way of passing a function with
 the right context to `onClick` prop of button element:
