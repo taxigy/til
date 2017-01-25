@@ -144,3 +144,9 @@ const a = x => 1 - /^0$/.test(x);
 What happens here is that `x` is type-casted into a string, and
 the string is either "0" or something else, so the test evaluates
 into true or false correspondingly.
+
+---
+
+More:
+
+- [Interesting discussion](http://stackoverflow.com/questions/41863620/what-does-mean-in-javascript) on use of "Latin letter 'Dental Click'" Unicode character in form `|ǀ|`, where `ǀ` is most likely undefined.
