@@ -7,7 +7,7 @@ machine, the whole installation process would look like
 sudo apt-get install nodejs # attention: not "node"!
 sudo apt-get install npm
 sudo ln -s `which nodejs` /usr/bin/node
-npm install -g elm
+sudo npm install -g elm
 ```
 
 After that, all the Elm toolbelt is available on the machine, and
