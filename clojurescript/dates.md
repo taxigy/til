@@ -6,12 +6,14 @@ How you do this in Javascript:
 
 ```javascript
 const now = new Date();
+const beginningOfTime = new Date(0);
 ```
 
 How you do this in ClojureScript:
 
 ```clojure
 (def now (new js/Date))
+(def beginning-of-time (new js/Date 0))
 ```
 
 ## Methods of prototype of Date
