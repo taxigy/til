@@ -72,5 +72,12 @@ user=> (extrusion [[1 2] 3 [4 5]])
 Note that the result is always a collection of collections and
 contains at least one item, which, in turn, can be empty.
 
-_it's a typical combinatoric problem, so there should be a better
-solution out there, TBD_
+The function `extrusion` has a loop with accumulated value; it
+looks like that `reduce` might be used instead:
+
+```clojure
+(defn extrusion [input]
+  (reduce smash [[]] input))
+```
+
+which would save us a few lines of code.
