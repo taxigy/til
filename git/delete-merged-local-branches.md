@@ -16,7 +16,6 @@ then remove the asterisk:
 $ git branch --merged | grep -v \*
   feature-xyz
   feature-def
-  feature-abc
   master
 ```
 
@@ -26,14 +25,13 @@ then also remove the master branch from the list:
 $ git branch --merged | grep -v \* | grep -v master
   feature-xyz
   feature-def
-  feature-abc
 ```
 
 then join them into a single string:
 
 ```bash
 $ git branch --merged | grep -v \* | grep -v master | xargs
-feature-xyz feature-def feature-abc
+feature-xyz feature-def
 ```
 
 then pass it to `git branch -d` as args:
@@ -42,4 +40,9 @@ then pass it to `git branch -d` as args:
 $ git branch -d `git branch --merged | grep -v \* | grep -v master | xargs`
 ```
 
-Done.
+But because `xargs` can apply the arguments to the command that
+follows it, it all can be reduced into plain
+
+```bash
+$ git branch --merged | grep -v \* | grep -v master | xargs git branch -d
+```
