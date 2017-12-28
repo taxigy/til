@@ -27,21 +27,19 @@ $ git branch --merged | grep -v \* | grep -v master
   feature-xyz
   feature-def
   feature-abc
-  master
 ```
 
 then join them into a single string:
 
 ```bash
 $ git branch --merged | grep -v \* | grep -v master | xargs
-feature-xyz feature-def feature-abc master
+feature-xyz feature-def feature-abc
 ```
 
 then pass it to `git branch -d` as args:
 
 ```bash
 $ git branch -d `git branch --merged | grep -v \* | grep -v master | xargs`
-feature-xyz feature-def feature-abc master
 ```
 
 Done.
