@@ -1,4 +1,4 @@
-# Empty keys in a map
+# Empty the values in a map
 
 Say, there's a map:
 
