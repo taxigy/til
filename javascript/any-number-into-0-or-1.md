@@ -150,3 +150,4 @@ into true or false correspondingly.
 More:
 
 - [Interesting discussion](http://stackoverflow.com/questions/41863620/what-does-mean-in-javascript) on use of "Latin letter 'Dental Click'" Unicode character in form `|ǀ|`, where `ǀ` is most likely undefined.
+- Other weird stuff: [checking if something is an element of a collection of somethings](./contains.md).
