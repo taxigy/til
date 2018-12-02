@@ -44,3 +44,5 @@ so that we get a generator that ends after a given number of values, thus:
 < 8
 < 9
 ```
+
+There is also a little [discussion on Code Review StackExchange](https://codereview.stackexchange.com/questions/208760/take-a-limited-number-of-items-from-a-potentially-infinite-generator) that produced a couple hints like preventing a limited generator from sending the process into a halt.
