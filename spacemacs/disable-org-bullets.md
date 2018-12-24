@@ -18,7 +18,7 @@ This way, Spacemacs won't load org-bullets.
 
 You also might notice that first-level headers and second-level headers are
 displayed in bigger font. To normalize them, we need to bring them to height of
-1. This is done via the setting called "customize-face". To go there, type
+`1`. This is done via the setting called "customize-face". To go there, type
 
 ```
 SPC SPC customize-face RET
